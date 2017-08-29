@@ -10,13 +10,28 @@ const app = {
 		panels.forEach((item)=> item.addEventListener(`transitionend`, app.toggleActive));
 	},
 
+	siblings(elem) {
+		return [...elem.parentElement.children]
+			.filter((item)=> {
+				return item.nodeType === 1
+				&& item !== elem;
+			});
+	},
+
 	toggleActive(e) {
+		const sibs = app.siblings(this);
+
+		sibs.forEach((item)=> item.classList.remove(`active`));
+
 		e.propertyName.includes(`flex`)
-		&& this.classList.toggle(`active`);
+		&& this.classList.add(`active`);
 	},
 
 	toggleOpen() {
-		this.classList.toggle(`open`);
+		const sibs = app.siblings(this);
+
+		sibs.forEach((item)=> item.classList.remove(`open`));
+		this.classList.add(`open`);
 	},
 };
 
