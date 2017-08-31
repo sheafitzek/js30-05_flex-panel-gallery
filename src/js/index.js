@@ -6,8 +6,15 @@ const app = {
 	panelListener() {
 		const panels = document.querySelectorAll(`.panel`);
 
-		panels.forEach((item)=> item.addEventListener(`click`, app.toggleOpen));
-		panels.forEach((item)=> item.addEventListener(`transitionend`, app.toggleActive));
+		panels.forEach((item)=> item.addEventListener(`click`, app.setOpenActive));
+	},
+
+	setOpenActive() {
+		const sibs = app.siblings(this);
+
+		sibs.forEach((item)=> item.classList.remove(`open`, `active`));
+		this.classList.add(`open`);
+		setTimeout(()=> this.classList.add(`active`), 700);
 	},
 
 	siblings(elem) {
@@ -16,22 +23,6 @@ const app = {
 				return item.nodeType === 1
 				&& item !== elem;
 			});
-	},
-
-	toggleActive(e) {
-		const sibs = app.siblings(this);
-
-		sibs.forEach((item)=> item.classList.remove(`active`));
-
-		e.propertyName.includes(`flex`)
-		&& this.classList.add(`active`);
-	},
-
-	toggleOpen() {
-		const sibs = app.siblings(this);
-
-		sibs.forEach((item)=> item.classList.remove(`open`));
-		this.classList.add(`open`);
 	},
 };
 
