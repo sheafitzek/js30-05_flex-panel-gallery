@@ -31,6 +31,7 @@ body {
   /* Safari transitionend event.propertyName === flex */
   /* Chrome + FF transitionend event.propertyName === flex-grow */
   transition: font-size 0.5s ease-in-out, flex 0.5s ease-in-out, background 0.2s;
+  content: '\e185';
   font-size: 20px;
   background-size: cover;
   background-position: center;
