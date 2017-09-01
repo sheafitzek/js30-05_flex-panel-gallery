@@ -1,0 +1,23 @@
+{
+  "name": "js30-05_flex-panel-gallery",
+  "version": "1.0.0",
+  "description": "A Flexbox Panel Image Gallery",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sheafitzek/js30-05_flex-panel-gallery.git"
+  },
+  "author": "Shea Fitzek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sheafitzek/js30-05_flex-panel-gallery/issues"
+  },
+  "homepage": "https://github.com/sheafitzek/js30-05_flex-panel-gallery",
+  "devDependencies": {
+    "gh-pages": "^1.0.0"
+  }
+}

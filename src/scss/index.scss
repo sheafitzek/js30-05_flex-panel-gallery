@@ -35,7 +35,7 @@ body {
 		font-size 0.5s ease-in-out,
 		flex 0.5s ease-in-out,
 		background 0.2s;content: '\e185';
-	font-size: 20px;
+	font-size: 2vw;
 	background-size: cover;
 	background-position: center;
 }
@@ -103,7 +103,7 @@ body {
 
 .panel.open {
 	flex: 5;
-	font-size: 40px;
+	font-size: 4vw;
 	color: red;
 }
 
@@ -114,7 +114,7 @@ body {
 
 	.panel {
 		flex-direction: row;
-		font-size: 0.5rem;
+		font-size: 3vw;
 		}
 
 	.panel>*:first-child {
@@ -126,6 +126,6 @@ body {
 	}
 
 	.panel.open {
-		font-size: 0.75rem;
+		font-size: 4vw;
 	}
 }
